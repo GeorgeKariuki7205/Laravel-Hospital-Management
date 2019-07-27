@@ -16,6 +16,9 @@ class CreateHospitalDetailsTable extends Migration
         Schema::create('hospital_details', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('hospital_name');
+            $table->string('location');
+            $table->Integer('level');
         });
     }
 
