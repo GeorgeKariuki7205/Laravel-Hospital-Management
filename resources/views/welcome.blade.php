@@ -4,7 +4,7 @@
     <div class="jumbotron jumbo" style="background-color:rgba(233,236,239,0.73);">
         <h1 id="inSmallSize" class="jumbotron-heading">Efficient Doctor-Patient Portal .</h1>
         <p id="JumbotronText" style="color:rgb(0,0,0);">Managing all The facets of the health sector and improcing lives in ways we know best.</p>
-        <p><a class="btn btn-danger" role="button" href="login.html" data-bs-hover-animate="rubberBand" id="jumbotron-Button" style="background-color:#ff0000;color:rgb(255,255,255);"><strong>Patient Log In.</strong></a></p>
+        <p><a class="btn btn-danger" role="button" href="/trial" data-bs-hover-animate="rubberBand" id="jumbotron-Button" style="background-color:#ff0000;color:rgb(255,255,255);"><strong>Patient Log In.</strong></a></p>
     </div>
 </div>
 <div style="background-color:#d3e4f8;padding-top:20px;">
