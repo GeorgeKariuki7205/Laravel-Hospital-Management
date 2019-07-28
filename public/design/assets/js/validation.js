@@ -1,5 +1,10 @@
 $(function(){
-	// TEXTOXES VARIABLES DECLARED HERE .
+    // TEXTOXES VARIABLES DECLARED HERE .
+    
+    //trial 
+
+console.log('this is a trial thsi is made.');
+
 	var fname = $("#fName");
     var lname = $("#Lname");
     var sname = $("#SName")

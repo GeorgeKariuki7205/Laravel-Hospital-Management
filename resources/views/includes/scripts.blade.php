@@ -8,3 +8,5 @@
 <script src="{{asset('design/assets/js/new.js')}}"></script>
 <script src="{{asset('design/"assets/js/Sortable-filter-gallery-portfolio.js')}}"></script>
 <script src="{{asset('design/assets/js/modal.js')}}"></script>
+<script src="{{asset('design/assets/js/validation.js')}}"></script>
+{{-- <script src="assets/js/validation.js"></script> --}}

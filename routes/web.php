@@ -21,7 +21,11 @@ Route::get('/trial','trialController@trial');
 
 Auth::routes();
 
+//The route that is used to revert the users to the registration page.
 
+Route::get('/sighnUp','patients\Main_Controller_For_Patients@index');
+
+// {{ route('register') }}
 // Route::get('/home', 'HomeController@index')->name('home');
 
 

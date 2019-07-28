@@ -14,7 +14,7 @@ class Main_Controller_For_Patients extends Controller
      */
     public function index()
     {
-        return view('patientFiles\sample');
+        return view('patientFiles\patient-registration');
     }
 
     /**
