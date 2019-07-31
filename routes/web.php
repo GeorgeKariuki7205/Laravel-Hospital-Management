@@ -25,8 +25,9 @@ Auth::routes();
 
 Route::get('/sighnUp','patients\Main_Controller_For_Patients@index');
 
-Route::post('/sighnUp','patients\Main_Controller_For_Patients@store');
+Route::post('/sighnUp','patients\Main_Controller_For_Patients@create');
 
+Route::post('/storeData','patients\Main_Controller_For_Patients@store');
 // {{ route('register') }}
 // Route::get('/home', 'HomeController@index')->name('home');
 

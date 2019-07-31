@@ -26,7 +26,17 @@ class Main_Controller_For_Patients extends Controller
      */
     public function create()
     {
-        //
+        $email = Input::get('email');
+        $firstName = Input::get('fName');
+        $lastName = Input::get('Lname');
+        $surName = Input::get('Sname');
+        $phoneNumber = Input::get('phone');
+        $residence = Input::get('residence');
+        $Birth_Certificate_Number =Input::get('birthCertNumber');
+        $KRA_Number =Input::get('kraNumber');
+        $NHIF_Number =Input::get('nhifNumber');
+        $Date_Of_Birth = Input::get('date');
+        return view('patientFiles/detailsConfirmation', compact('email','firstName','lastName','surName','phoneNumber','residence','Birth_Certificate_Number','KRA_Number','NHIF_Number','Date_Of_Birth'));
     }
 
     /**
@@ -42,27 +52,25 @@ class Main_Controller_For_Patients extends Controller
 
         //This is the controller method that is used to store the user deatails into the database.
 
-        $details = new User_Detail(array(
-            'First_Name'=> $request->get('fName'),
-            'Last_Name'=> $request->get('Lname'),
-            'Sur_Name'=> $request->get('Sname'),
-            'Phone_Number'=> $request->get('phone'),
-            'email'=> $request->get('email'),
-            'Residence'=> $request->get('residence'),
-            'Birth_Certificate_Number'=> $request->get('birthCertNumber'),
-            'KRA_Number'=> $request->get('kraNumber'),
-            'NHIF_Number'=> $request->get('nhifNumber'),
-            'Date_Of_Birth'=> $request->get('date'),
-        ));
+                                $details = new User_Detail(array(
+                                    'First_Name'=> $request->get('firstName'),
+                                    'Last_Name'=> $request->get('lastName'),
+                                    'Sur_Name'=> $request->get('surName'),
+                                    'Phone_Number'=> $request->get('phoneNumber'),
+                                    'email'=> $request->get('email'),
+                                    'Residence'=> $request->get('residence'),
+                                    'Birth_Certificate_Number'=> $request->get('Birth_Certificate_Number'),
+                                    'KRA_Number'=> $request->get('KRA_Number'),
+                                    'NHIF_Number'=> $request->get('NHIF_Number'),
+                                    'Date_Of_Birth'=> $request->get('Date_Of_Birth'),
+                                ));
 
-        $details->save();
-        $email = Input::get('email');
-        $name = User_Detail::whereEmail($email)->firstOrFail();
-        // $name = "I keep on falling in love.";
-        // The methods that will be transmitted to the set password page are as follows.
-        return view('auth\register', compact('name'));
+                                $details->save();
 
+                                $email = Input::get('email');
+                                $name = User_Detail::whereEmail($email)->firstOrFail();
 
+                                return view('auth\register', compact('name'));
     }
 
     /**
