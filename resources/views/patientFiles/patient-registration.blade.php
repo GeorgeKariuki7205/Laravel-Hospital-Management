@@ -4,7 +4,8 @@
     <div class="container-fluid">
         <h1 style="font-family:times new roman;text-align:center;">Registration Form.</h1>
         <hr>
-        <form action="registration.php" method="post" id="contactForm">
+        <form method="post" id="contactForm">
+            {{ csrf_field() }}
             <input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.awebsite.com"><input class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form"><input class="form-control" type="hidden"
                 name="to" value="email@awebsite.com">
             <div class="form-row">
@@ -22,7 +23,7 @@
                                 <div class="col-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="form-group invalid"><label for="from-phone">First name</label><span class="required-input">*</span>
                                         <div class="input-group has-danger">
-                                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control has-error" type="text" name="fName" required="" placeholder="First Name." pattern="[a-z]" id="fName"></div>
+                                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control has-error" type="text" name="fName" required="" placeholder="First Name."id="fName"></div>
                                         <span
                                             id="FNameError" style="color:red;"></span>
                                     </div>
@@ -30,7 +31,7 @@
                                 <div class="col-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="form-group"><label for="from-phone">Last Name .</label><span class="required-input">*</span>
                                         <div class="input-group">
-                                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control" type="text" name="Lname" required="" placeholder="Last Name." pattern="[a-z]" autocomplete="on" id="Lname"></div>
+                                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control" type="text" name="Lname" required="" placeholder="Last Name." autocomplete="on" id="Lname"></div>
                                         <span
                                             id="LNameError" style="color:red;"></span>
                                     </div>
@@ -38,7 +39,7 @@
                                 <div class="col-12 col-sm-4 col-md-4 col-lg-4">
                                     <div class="form-group"><label for="from-phone">Sur Name</label><span class="required-input">*</span>
                                         <div class="input-group">
-                                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control" type="text" name="Sname" required="" placeholder="Sur Name." pattern="[a-z]" autocomplete="on" id="SName"></div>
+                                            <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div><input class="form-control" type="text" name="Sname" required="" placeholder="Sur Name." autocomplete="on" id="SName"></div>
                                         <span
                                             id="SNameError" style="color:red;"></span>
                                     </div>
