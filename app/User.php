@@ -11,7 +11,7 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 class User extends Authenticatable
 {
     use Notifiable;
-    use Authenticatable,CanResetPassword;
+    // use Authenticatable,CanResetPassword;
     use EntrustUserTrait;
     /**
      * The attributes that are mass assignable.
